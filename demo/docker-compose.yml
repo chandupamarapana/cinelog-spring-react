@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: movie-diary-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: chandupa
+      MYSQL_DATABASE: moviediary
+    ports:
+      - "3307:3306" # We access it on port 3307 locally
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
