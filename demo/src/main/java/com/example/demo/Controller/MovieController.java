@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/movies")
-@CrossOrigin(origins = "http://localhost:5173") // Port 5173 is default for Vite/React
+@CrossOrigin(origins = "*") // Port 5173 is default for Vite/React
 public class MovieController {
     private final MovieService service;
 
